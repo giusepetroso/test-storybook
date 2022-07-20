@@ -1,0 +1,60 @@
+@import "mixins";
+
+.bb-btn {
+  @apply inline-flex items-center justify-center rounded-lg
+    border transition cursor-pointer
+    focus:outline-none focus:ring 
+    disabled:opacity-25;
+
+  &--sm:not(&--icon):not(&--rounded) {
+    @apply text-sm px-2 py-1;
+  }
+
+  &--md:not(&--icon):not(&--rounded) {
+    @apply text-base px-3 py-2;
+  }
+
+  &--lg:not(&--icon):not(&--rounded) {
+    @apply text-lg px-4 py-3;
+  }
+  
+  &--icon {
+    @apply rounded;
+
+    &.bb-btn--sm {
+      @apply w-6 h-6 p-1;
+    }
+
+    &.bb-btn--md {
+      @apply w-8 h-8 p-2;
+    }
+
+    &.bb-btn--lg {
+      @apply w-10 h-10 p-3;
+    }
+  }
+
+  &--rounded {
+    @apply rounded-full p-4;
+
+    &.bb-btn--sm {
+      @apply w-12 h-12 text-xs;
+    }
+
+    &.bb-btn--md {
+      @apply w-16 h-16 text-sm;
+    }
+
+    &.bb-btn--lg {
+      @apply w-20 h-20;
+    }
+  }
+}
+
+@each $color in var(--color-palette) {
+  @mixin bb-btn-palette $(color);
+}
+
+@each $color in var(--color-alert) {
+  @mixin bb-btn-alert $(color);
+}

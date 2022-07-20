@@ -1,0 +1,55 @@
+@define-mixin bb-btn-palette $paletteColor {
+  .bb-btn {
+    &.bb-btn--$(paletteColor):not(&--light):not(&--outline) {
+      @apply text-white bg-bb-$(paletteColor) border-bb-$(paletteColor)
+      focus:border-white focus:ring-bb-$(paletteColor)-700
+      hover:text-white hover:bg-bb-$(paletteColor)-700
+      active:bg-bb-$(paletteColor)-700
+      disabled:text-white disabled:bg-bb-$(paletteColor);
+    }
+
+    &.bb-btn--$(paletteColor).bb-btn--light {
+      @apply text-bb-$(paletteColor)-700 bg-bb-$(paletteColor)-100 border-bb-$(paletteColor)-100
+      focus:border-white focus:ring-bb-$(paletteColor)
+      hover:text-white hover:bg-bb-$(paletteColor)
+      active:bg-bb-$(paletteColor)
+      disabled:text-white disabled:bg-bb-$(paletteColor);
+    }
+
+    &.bb-btn--$(paletteColor).bb-btn--outline {
+      @apply text-bb-$(paletteColor)-600 bg-white border-bb-$(paletteColor)-600
+      focus:border-white focus:ring-bb-$(paletteColor)
+      hover:text-white hover:bg-bb-$(paletteColor)-600
+      active:bg-bb-$(paletteColor)
+      disabled:text-white disabled:bg-bb-$(paletteColor);
+    }
+  }
+}
+
+@define-mixin bb-btn-alert $alertColor {
+  .bb-btn {
+    &.bb-btn--$(alertColor):not(&--light):not(&--outline) {
+      @apply text-white bg-bb-$(alertColor) border-bb-$(alertColor)
+      focus:border-white focus:ring-bb-$(alertColor)-500
+      hover:text-white hover:bg-bb-$(alertColor)-500
+      active:bg-bb-$(alertColor)-500
+      disabled:text-white disabled:bg-bb-$(alertColor);
+    }
+
+    &.bb-btn--$(alertColor).bb-btn--light {
+      @apply text-bb-$(alertColor)-500 bg-bb-$(alertColor)-100 border-bb-$(alertColor)-100
+      focus:border-white focus:ring-bb-$(alertColor)
+      hover:text-white hover:bg-bb-$(alertColor)
+      active:bg-bb-$(alertColor)
+      disabled:text-white disabled:bg-bb-$(alertColor);
+    }
+
+    &.bb-btn--$(alertColor).bb-btn--outline {
+      @apply text-bb-$(alertColor)-500 bg-white border-bb-$(alertColor)-500
+        focus:border-white focus:ring-bb-$(alertColor)
+        hover:text-white hover:bg-bb-$(alertColor)-500
+        active:bg-bb-$(alertColor)
+        disabled:text-white disabled:bg-bb-$(alertColor);
+    }
+  }
+}

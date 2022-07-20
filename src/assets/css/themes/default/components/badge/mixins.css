@@ -1,0 +1,31 @@
+@define-mixin bb-badge-palette $paletteColor {
+  .bb-badge {
+    &.bb-badge--$(paletteColor):not(&--light):not(&--outline) {
+      @apply text-white bg-bb-$(paletteColor) border-bb-$(paletteColor);
+    }
+
+    &.bb-badge--$(paletteColor).bb-badge--light {
+      @apply text-bb-$(paletteColor)-700 bg-bb-$(paletteColor)-100 border-bb-$(paletteColor)-100;
+    }
+
+    &.bb-badge--$(paletteColor).bb-badge--outline {
+      @apply text-bb-$(paletteColor)-700 bg-bb-$(paletteColor)-600 bg-white border-bb-$(paletteColor)-600;
+    }
+  }
+}
+
+@define-mixin bb-badge-alert $alertColor {
+  .bb-badge {
+    &.bb-badge--$(alertColor):not(&--light):not(&--outline) {
+      @apply text-white bg-bb-$(alertColor) border-bb-$(alertColor);
+    }
+
+    &.bb-badge--$(alertColor).bb-badge--light {
+      @apply text-bb-$(alertColor)-500 bg-bb-$(alertColor)-100 border-bb-$(alertColor)-100;
+    }
+
+    &.bb-badge--$(alertColor).bb-badge--outline {
+      @apply text-bb-$(alertColor)-500 bg-bb-$(alertColor)-500 bg-white border-bb-$(alertColor)-500;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.bb-tooltip {
+  &__transition {
+    &--enter-active {
+      @apply transition-opacity opacity-100;
+    }
+
+    &--leave-active {
+      @apply transition-opacity opacity-0;
+    }
+  }
+
+  &__activator {
+    /* default style for the activator */
+  }
+
+  &__panel {
+    @apply bg-white shadow p-2 rounded-lg;
+
+    &--primary {
+      @apply bg-bb-primary text-white;
+    }
+
+    /* and so on... (maybe do a mixin like on button, etc) */
+  }
+
+  &__arrow,
+  &__arrow::before {
+    @apply absolute w-2 h-2 bg-inherit;
+  }
+
+  &__arrow {
+    @apply invisible;
+  }
+
+  &__arrow::before {
+    @apply visible content-[''] transform-gpu rotate-45;
+  }
+
+  &__panel[data-popper-placement^="top"] &__arrow {
+    @apply -bottom-1;
+  }
+
+  &__panel[data-popper-placement^="bottom"] &__arrow {
+    @apply -top-1;
+  }
+
+  &__panel[data-popper-placement^="left"] &__arrow {
+    @apply -right-1;
+  }
+
+  &__panel[data-popper-placement^="right"] &__arrow {
+    @apply -left-1;
+  }
+}

@@ -1,0 +1,24 @@
+/* BREADCRUMBS */
+.bb-bredcrumbs-container {
+  @apply flex flex-col text-sm lg:flex-row lg:items-center lg:space-x-1 lg:text-base;
+}
+
+.bb-bredcrumbs-item {
+  @apply flex items-center space-x-1;
+}
+
+.bb-bredcrumbs-item .bb-bredcrumbs-link {
+  @apply bb-link bb-link--primary;
+}
+
+.bb-bredcrumbs-item .bb-bredcrumbs-no-link {
+  @apply font-bold text-bb-black-500;
+}
+
+.bb-bredcrumbs-last-item {
+  @apply text-bb-primary;
+}
+
+.bb-bredcrumbs-chevron {
+  @apply transform-gpu rotate-90 lg:rotate-0 h-4 text-bb-black-500;
+}

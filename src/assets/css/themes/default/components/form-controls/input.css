@@ -1,0 +1,13 @@
+.bb-input {
+  @apply w-full border rounded-md px-3 py-2 bg-white border-bb-gray-300 focus:ring-0 focus:outline-none placeholder-bb-gray-500;
+}
+
+.bb-input:not(.readonly),
+.bb-input:not(:disabled) {
+  @apply focus:border-bb-primary-lighter;
+}
+
+.bb-input.readonly,
+.bb-input:disabled {
+  @apply bg-bb-gray-100 text-bb-gray-400;
+}

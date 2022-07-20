@@ -1,0 +1,24 @@
+/* variables */
+@import "colors";
+
+/* tailwind base layer */
+@import "tailwindcss/base";
+
+/* components */
+@import "components/badge";
+@import "components/breadcrumb";
+@import "components/button";
+@import "components/dialog";
+@import "components/form-controls";
+@import "components/label";
+@import "components/link";
+@import "components/modal";
+@import "components/select";
+@import "components/table";
+@import "components/tooltip";
+
+/* typography */
+@import "typography";
+
+/* tailwind utilities */
+@import "tailwindcss/utilities";

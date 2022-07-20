@@ -1,0 +1,13 @@
+@import "mixins";
+
+.bb-badge {
+  @apply inline-block text-base px-3 py-1 rounded-full border;
+}
+
+@each $color in var(--color-palette) {
+  @mixin bb-badge-palette $(color);
+}
+
+@each $color in var(--color-alert) {
+  @mixin bb-badge-alert $(color);
+}

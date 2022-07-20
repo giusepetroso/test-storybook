@@ -1,0 +1,110 @@
+.bb-table .empty {
+  @apply py-12;
+}
+
+.bb-table .empty > img {
+  @apply w-40 max-w-full mx-auto mb-6;
+}
+
+.bb-table h2 {
+  @apply text-xl text-center mx-auto;
+}
+
+.bb-table .table-container {
+  @apply w-full overflow-x-auto;
+}
+
+.bb-table table {
+  @apply min-w-full;
+}
+
+.bb-table tbody tr {
+  @apply border-b border-bb-gray-200;
+}
+
+.bb-table th {
+  @apply uppercase text-bb-black-500 bg-bb-black-100 font-normal text-sm px-8 py-3;
+}
+
+.bb-table th.check {
+  @apply pr-2;
+}
+
+.bb-table.compact th:first-child,
+.bb-table.compact th:last-child {
+  @apply px-3;
+}
+
+.bb-table td {
+  @apply font-bold px-8 py-6;
+}
+
+.bb-table td.check {
+  @apply pr-2;
+}
+
+.bb-table td:not(.no-truncate) {
+  @apply truncate;
+}
+
+.bb-table.compact td {
+  @apply py-2 text-sm;
+}
+
+.bb-table.compact td:first-child,
+.bb-table.compact td:last-child {
+  @apply px-3;
+}
+
+.bb-table th.center,
+.bb-table td.center {
+  @apply text-center;
+}
+
+.bb-table th.left,
+.bb-table td.left {
+  @apply text-left;
+}
+
+.bb-table th.right,
+.bb-table td.right {
+  @apply text-right;
+}
+
+.bb-table td > .actions {
+  @apply h-full flex items-center justify-end space-x-2;
+}
+
+.bb-table td > .actions button {
+  @apply bg-bb-gray-200 text-bb-gray-600 h-7 w-7 rounded p-1 transition-colors;
+}
+
+.bb-table td > .actions button.edit,
+.bb-table td > .actions button.go {
+  @apply hover:text-bb-primary;
+}
+
+.bb-table td > .actions button.restore,
+.bb-table td > .actions button.impersonate {
+  @apply hover:text-bb-yellow;
+}
+
+.bb-table td > .actions button.delete {
+  @apply hover:text-bb-error;
+}
+
+.bb-table .links {
+  @apply py-6 space-x-2;
+}
+
+.bb-table .links a {
+  @apply font-bold text-sm rounded-full w-8 h-8 inline-flex items-center justify-center transition-colors;
+}
+
+.bb-table .links a:not(.active) {
+  @apply bg-bb-gray-200 hover:bg-bb-primary hover:text-white;
+}
+
+.bb-table .links a.active {
+  @apply bg-bb-primary text-white;
+}

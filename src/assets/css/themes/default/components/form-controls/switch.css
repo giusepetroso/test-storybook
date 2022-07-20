@@ -1,0 +1,27 @@
+/* building block */
+.bb-switch {
+  @apply relative inline-flex items-center rounded-full h-6 w-11 border border-gray-300 
+    focus:outline-none focus:ring focus:ring-bb-primary-200 focus:ring-opacity-50 
+    disabled:opacity-50;
+}
+
+.bb-switch.checked {
+  @apply bg-bb-primary;
+}
+
+.bb-switch:not(.checked) {
+  @apply bg-bb-gray-300;
+}
+
+.bb-switch-handle {
+  @apply inline-block w-5 h-5 bg-white rounded-full;
+}
+
+/* composites */
+.bb-switch-wrapper {
+  @apply !cursor-pointer;
+}
+
+.bb-switch-label {
+  @apply text-base;
+}

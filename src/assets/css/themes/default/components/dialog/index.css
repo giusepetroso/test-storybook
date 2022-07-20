@@ -1,0 +1,19 @@
+.bb-dialog {
+  @apply fixed z-50 inset-0 grid place-items-center p-4 md:p-6 overflow-y-auto;
+}
+
+.bb-dialog-overlay {
+  @apply fixed z-0 inset-0 bg-black opacity-30;
+}
+
+.bb-dialog-title {
+  @apply font-bold text-2xl;
+}
+
+.bb-dialog-description {
+  @apply text-sm;
+}
+
+.bb-dialog-body {
+  @apply p-6 rounded-b-xl border border-t-0 bg-white border-bb-gray-300;
+}

@@ -1,0 +1,27 @@
+/* LINKS */
+.bb-link {
+  @apply inline-flex items-center justify-center 
+    text-bb-black-500 font-bold transition 
+    focus:outline-none focus:ring-0 
+    hover:underline active:underline;
+
+  &:not(.disabled) {
+    @apply cursor-pointer;
+  }
+
+  &.disabled {
+    @apply opacity-25 no-underline hover:text-bb-black-500;
+  }
+}
+
+@each $color in var(--color-palette) {
+  .bb-link--$(color) {
+    @apply text-bb-$(color);
+  }
+}
+
+@each $color in var(--color-alert) {
+  .bb-link--$(color) {
+    @apply text-bb-$(color);
+  }
+}

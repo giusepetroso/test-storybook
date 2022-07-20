@@ -1,0 +1,51 @@
+/* base radio */
+.bb-radio-base {
+  @apply inline-grid place-items-center rounded-full h-6 w-6 border border-gray-300 text-bb-primary shadow-sm cursor-pointer box-border;
+
+  &__dot {
+    @apply block rounded-full h-4 w-4 bg-bb-primary;
+  }
+
+  &.disabled {
+    @apply opacity-50;
+  }
+
+  &.disabled:not(.checked) {
+    @apply bg-bb-gray-200;
+  }
+
+  &.focused:not(.disabled) {
+    @apply border-bb-primary-300 ring ring-bb-primary-200 ring-opacity-50;
+  }
+}
+
+/* composite radio */
+.bb-radio {
+  @apply inline-flex cursor-pointer;
+
+  &__label {
+    @apply text-base;
+  }
+
+  &--label-top {
+    @apply flex-col-reverse;
+  }
+
+  &--label-bottom {
+    @apply flex-col;
+  }
+
+  &--label-left {
+    @apply flex-row-reverse;
+  }
+
+  &--label-right {
+    @apply flex-row;
+  }
+}
+
+@each $gap in (1, 2, 4, 6, 8, 10, 12) {
+  .bb-radio--label-gap-$(gap) {
+    @apply gap-$(gap);
+  }
+}
